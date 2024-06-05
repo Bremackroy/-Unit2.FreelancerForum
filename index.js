@@ -16,6 +16,9 @@ let freelancers = [
 function renderFreelancers() {
     const freelancersList = document.getElementById('freelancers-list');
     freelancersList.innerHTML = '';
+    const freelancersBorder = document.getElementById('freelancers-border').style.border = "thick solid #000";
+    const freelancersBorderRadius = document.getElementById('freelancers-border').style.borderRadius = "10px";
+    const freelancersTextAlign = document.getElementById('freelancers-border').style.textAlign = "center";
 
     freelancers.forEach(freelancer => {
         const listItem = document.createElement('li');
