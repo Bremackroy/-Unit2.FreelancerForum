@@ -11,6 +11,7 @@ let freelancers = [
     { name: 'Carol', occupation: 'Programmer', startingPrice: 70 },
 ];
 
+
 // Function to render initial freelancer data //
 
 function renderFreelancers() {
@@ -21,7 +22,7 @@ function renderFreelancers() {
     const freelancersTextAlign = document.getElementById('freelancers-border').style.textAlign = "center";
 
     freelancers.forEach(freelancer => {
-        const listItem = document.createElement('li');
+        const listItem = document.createElement('ul');
         listItem.textContent = `${freelancer.name} - ${freelancer.occupation} - Starting Price: $${freelancer.startingPrice}`;
         freelancersList.appendChild(listItem);
     });
@@ -48,10 +49,9 @@ function calculateAveragePrice() {
 
 // Function to update the displayed average price message //
 function updateAveragePrice() {
-    const averagePriceSpan = document.getElementById('average-price');
+    const averagePriceSpan = document.querySelector('#average-price');
     averagePriceSpan.textContent = calculateAveragePrice();
 }
-
 // Initial render //
 renderFreelancers();
 updateAveragePrice();
